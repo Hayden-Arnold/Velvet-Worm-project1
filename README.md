@@ -9,36 +9,26 @@ An application that uses an API to return Character data on Rick and Morty chara
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
-
- https://rickandmortyapi.com/api/character
-  const res = await axios.get("https://dog.ceo/api/breeds/list/all");
+const res = await axios.get("https://rickandmortyapi.com/api/character");
 
 ## Wireframes
-Desktop Wireframe Look: 
+Desktop Wireframe: 
 https://imgur.com/JkUcmg1
 
-Mobile Wireframe Look:
+Mobile Wireframe:
 https://imgur.com/m6wHbve
-
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
 
 ### MVP/PostMVP
 
-
-
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
-
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - Find and use external api 
 - Render data on page 
 - Allow user to look up charachters
-- Allow users to use lined words
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
+
+-
 
 ## Project Schedule
 
@@ -58,6 +48,8 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 https://imgur.com/QGg43ZP
 
+https://imgur.com/39cbe1L
+
 Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
 
 ## Timeframes
@@ -75,13 +67,13 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | search button | H | 4hrs| hrs | hrs |
 | Character picture | H | 4hrs| hrs | hrs |
 | Character name | H | 3hrs| hrs | hrs |
-| Character status | H | 3hrs| hrs | hrs |
-| Github link | H | 3hrs| hrs | hrs |
-| Linkden link | H | 3hrs| hrs | hrs |
-| Bottom bar: | H | 3hrs| hrs | hrs |
+| Character status | M | 3hrs| hrs | hrs |
+| Github link | M | 3hrs| hrs | hrs |
+| Linkden link | M | 3hrs| hrs | hrs |
+| Bottom bar: | M | 3hrs| hrs | hrs |
 | Title | H | 3hrs| hrs | hrs |
-| Background image | H | 3hrs| hrs | hrs |
-| Total | H | 6hrs| hrs | hrs |
+| Background image | L | 3hrs| hrs | hrs |
+| Total | H | 39hrs| hrs | hrs |
 
 ## Code Snippet
 
@@ -94,4 +86,4 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ Use this section to document what changes were made and the reasoning behind those changes.
