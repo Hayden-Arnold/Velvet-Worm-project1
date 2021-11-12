@@ -1,50 +1,42 @@
-// async function fetchData(character) {
-//   try {
-//     let url = await fetch(`https://rickandmortyapi.com/api/character`);
-//     let user = await response.json();
-//     newfunction();
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
-
-// axios
-//   .get("https://rickandmortyapi.com/api/character")
-//   .then((res) => {
-//   console.log(res.data.results);
-//   })
-//   .catch((error) => {
-//     console.log(error);
-// })
-
-
-// function fetchData(name) {
-//   const url = `https://rickandmortyapi.com/api/character`;
-//   axios.get(url).then((res) => {
-//     console.log(res.data);
-//   }).catch((error) => {
-//     console.log(error);
-//   });
-// }
-
-// fetchData("Rick");
-
 async function fetchData(name) {
   const url = `https://rickandmortyapi.com/api/character`;
   try {
     const res = await axios.get(url);
-    const charData = res.data;
-    showCharData(charData);
+    const charData = res.data.results;
+    filterData(charData, name);
   } catch (error) {
     console.log(error);
   }
 }
 
+const datadiv = document.querySelector("#char-data");
+
 function showCharData(data) {
   console.log(data);
-  const charName = document.createElement("h2");
-  charName.innerText = data.name;
+  data.forEach(character => {
+    const charName = document.createElement("h2");
+    charName.innerText = character.name;
+    datadiv.appendChild(charName);
+    const image = document.createElement("img");
+    image.src = character.image;
+    datadiv.appendChild(image);
+  });
 }
 
+let searchInput = document.querySelector("#blank");
 
-fetchData("Rick");
+let searchform = document.querySelector(".search-section");
+searchform.addEventListener("submit", (event) => {
+  event.preventDefault()
+  let name = searchInput.value
+  fetchData(name);
+});
+
+function filterData(characters, name) {
+  let foundChar = characters.filter(character => {
+    if (character.name.toLowerCase() === name.toLowerCase()) {
+      return character
+    }
+  })
+  showCharData(foundChar);
+}
