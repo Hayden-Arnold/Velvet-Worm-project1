@@ -1,7 +1,7 @@
 # Project Overview
 
 ## Project Name
-Rick and Morty Character Sheet.
+# [Rick and Morty Character Sheet](https://hayden-arnold.github.io/Velvet-Worm-project1/)
 
 ## Project Description
 
