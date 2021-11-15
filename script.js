@@ -17,6 +17,9 @@ function showCharData(data) {
     const charName = document.createElement("h2");
     charName.innerText = character.name;
     datadiv.appendChild(charName);
+    const charStatus = document.createElement("h3");
+    charStatus.innerText = character.status;
+    datadiv.appendChild(charStatus);
     const image = document.createElement("img");
     image.src = character.image;
     datadiv.appendChild(image);

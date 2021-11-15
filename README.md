@@ -9,7 +9,18 @@ An application that uses an API to return Character data on Rick and Morty chara
 
 ## API and Data Sample
 
-const res = await axios.get("https://rickandmortyapi.com/api/character");
+```
+async function fetchData(name) {
+  const url = `https://rickandmortyapi.com/api/character`;
+  try {
+    const res = await axios.get(url);
+    const charData = res.data.results;
+    filterData(charData, name);
+  } catch (error) {
+    console.log(error);
+  }
+}
+```
 
 ## Wireframes
 Desktop Wireframe: 
@@ -22,27 +33,27 @@ https://imgur.com/m6wHbve
 
 #### MVP 
 
-- Find and use external api 
-- Render data on page 
-- Allow user to look up charachters
+- Find and use an external api for Rick and Morty characters.
+
+- Allow user to look up characters using a search bar.
+
+- Render data on page after a search button has been used.
 
 #### PostMVP  
 
--
+- Add styling to my page.
+
+- Add links to my socials.
 
 ## Project Schedule
 
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
-
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
-
 |  Day | Deliverable | Status
 |---|---| ---|
-|Nov 8| Home Tab / More R&M Tab / Wiki Tab | N/A
-|Nov 9| Portal / search bar / search button | N/A
-|Nov 10| Character picture / Character name/ Character status | N/A
-|Nov 11| Github link / Linkden link /  | N/A
-|Nov 12| Bottom bar / Title / Background | Complete / Incomplete = N/A
+|Nov 8| Home Tab / More R&M Tab / Wiki Tab | Complete
+|Nov 9| Portal / search bar / search button | Complete
+|Nov 10| Character picture / Character name/ Character status | Complete
+|Nov 11| Github link / Linkden link /  | Complete
+|Nov 12| Bottom bar / Title / Background | Complete
 
 ## Priority Matrix
 
@@ -50,40 +61,35 @@ https://imgur.com/QGg43ZP
 
 https://imgur.com/39cbe1L
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
-
 ## Timeframes
-
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Home Tab | H | 2hrs| hrs | hrs |
-| More R&M Tab | H | 2hrs| hrs | hrs |
-| Wiki Tab | H | 2hrs| hrs | hrs |
-| Portal image and search bar | H | 4hrs| hrs | hrs |
-| search button | H | 4hrs| hrs | hrs |
-| Character picture | H | 4hrs| hrs | hrs |
-| Character name | H | 3hrs| hrs | hrs |
-| Character status | M | 3hrs| hrs | hrs |
-| Github link | M | 3hrs| hrs | hrs |
-| Linkden link | M | 3hrs| hrs | hrs |
-| Bottom bar: | M | 3hrs| hrs | hrs |
-| Title | H | 3hrs| hrs | hrs |
-| Background image | L | 3hrs| hrs | hrs |
-| Total | H | 39hrs| hrs | hrs |
+| Home Tab | H | 2hrs| 1hrs |
+| More R&M Tab | H | 2hrs| 1hrs |
+| Wiki Tab | H | 2hrs| 1hrs |
+| Portal image and search bar | H | 4hrs| 7hrs |
+| search button | H | 4hrs| 4hrs |
+| Character picture | H | 4hrs| 3hrs |
+| Character name | H | 3hrs| 3hrs |
+| Character status | M | 3hrs| 3hrs |
+| Github link | M | 3hrs| 3hrs |
+| Linkden link | M | 3hrs| 3hrs |
+| Bottom bar: | M | 3hrs| 3hrs |
+| Title | H | 3hrs| 3hrs |
+| Background image | L | 3hrs| 3hrs |
+| Total | H | 39hrs| 38hrs |
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+let searchform = document.querySelector(".search-section");
+searchform.addEventListener("submit", (event) => {
+  event.preventDefault()
+  let name = searchInput.value
+  fetchData(name);
+});
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.
+No changes were made from my intended project idea. I scoped my project well and hit the T I wanted to hit on this project!
