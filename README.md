@@ -92,4 +92,9 @@ searchform.addEventListener("submit", (event) => {
 ```
 
 ## Change Log
+
 No changes were made from my intended project idea. I scoped my project well and hit the T I wanted to hit on this project!
+
+## Link to Deployed Site
+
+https://hayden-arnold.github.io/Velvet-Worm-project1/
