@@ -64,7 +64,7 @@ https://imgur.com/39cbe1L
 ## Timeframes
 
 | Component | Priority | Estimated Time | Time Invested |
-| --- | :---: |  :---: | :---: | :---: |
+| --- | :---: |  :---: | :---: |
 | Home Tab | H | 2hrs| 1hrs |
 | More R&M Tab | H | 2hrs| 1hrs |
 | Wiki Tab | H | 2hrs| 1hrs |
